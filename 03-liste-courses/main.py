@@ -21,7 +21,7 @@ def clear_list():
 
 while True:      
 
-    print("1. Ajouter un élément a  la liste ")
+    print("1.Ajouter un élément a  la liste ")
     print("2.Retirer un élément de la liste ")
     print("3.Afficher la liste ")
     print("4.Vider la liste ")
