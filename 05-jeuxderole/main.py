@@ -14,8 +14,7 @@ while MYPV > 0 and ENNEMYPV > 0:
     if skip:
         enemy_attack = randint(5, 15)
         MYPV -= enemy_attack
-        print(f"IMPOSSIBLE D'ATTAQUER ! Vous avez subi {enemy_attack} point(s) de dégât ! ⚔️
-Il vous reste {MYPV} point(s) de vie ❤️")
+        print(f"IMPOSSIBLE D'ATTAQUER ! Vous avez subi {enemy_attack} point(s) de dégât ! ⚔️ Il vous reste {MYPV} point(s) de vie ❤️")
         print("-" * 50)
         if MYPV <= 0:
             print("YOU LOSE❌")
@@ -60,9 +59,7 @@ Il vous reste {MYPV} point(s) de vie ❤️")
     if ENNEMYPV > 0:
         enemy_attack = randint(5, 15)
         MYPV -= enemy_attack
-        print(f"Vous avez subi {enemy_attack} point(s) de dégât ! ⚔️
-Il vous reste {MYPV} point(s) de vie ❤️
-Il reste {ENNEMYPV} point(s) de vie à l'ennemi.")
+        print(f"Vous avez subi {enemy_attack} point(s) de dégât ! ⚔️\nIl vous reste {MYPV} point(s) de vie ❤️\nIl reste {ENNEMYPV} point(s) de vie à l'ennemi.")
         if MYPV <= 0:
             print("YOU LOSE❌")
             break
