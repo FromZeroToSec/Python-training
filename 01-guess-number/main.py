@@ -1,23 +1,26 @@
 import random
 
+# Main game loop  restarts the game after each round
 while True:
-    secret = random.randint(1, 10)
+    secret_number = random.randint(1, 10)  # Generate a random number between 1 and 10
     attempts = 0
 
+    # Attempt loop — max 5 tries per round
     while attempts < 5:
-        guess = int(input("Veuillez choisir un chiffre entre 1 et 10: "))
+        user_guess = int(input("Choose a number between 1 and 10: "))
         attempts += 1
 
-        if guess == secret:
-            print("You win")
+        if user_guess == secret_number:
+            print("You win!")
             break
-        elif guess > secret:
-            print("Trop grand")
-        elif guess < secret:
-            print("Trop petit")
+        elif user_guess > secret_number:
+            print("Too high")
+        elif user_guess < secret_number:
+            print("Too low")
     else:
-        print(f"Perdu le chiffre secret est {secret}")
+        print(f"You lose! The secret number was {secret_number}")
 
-    again = input("Rejouer ? (y/n)").lower()
-    if again == "n":
+    # Ask player if they want to play again
+    play_again = input("Play again? (y/n): ").lower()
+    if play_again == "n":
         break
