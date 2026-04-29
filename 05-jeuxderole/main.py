@@ -1,66 +1,67 @@
 from random import randint
 
-# Statistiques initiales du joueur et de l'ennemi
-MYPV = 50
-ENNEMYPV = 50
-POTION = 3
-skip = False
+# Initial stats for the player and the enemy
+PLAYER_HP = 50
+ENEMY_HP = 50
+POTIONS = 3
+skip_turn = False
 
-print("⚔️ Le Combat Commence ⚔️")
+print("⚔️ The Battle Begins ⚔️")
 
-# Boucle de jeu - tourne tant que les deux joueurs sont en vie
-while MYPV > 0 and ENNEMYPV > 0:
-    # Si le joueur a utilisé une potion lors du tour précédent, il passe son tour
-    if skip:
-        enemy_attack = randint(5, 15)
-        MYPV -= enemy_attack
-        print(f"IMPOSSIBLE D'ATTAQUER ! Vous avez subi {enemy_attack} point(s) de dégât ! ⚔️ Il vous reste {MYPV} point(s) de vie ❤️")
+# Main game loop — runs as long as both players are alive
+while PLAYER_HP > 0 and ENEMY_HP > 0:
+
+    # If the player used a potion last turn, they skip their attack
+    if skip_turn:
+        enemy_damage = randint(5, 15)
+        PLAYER_HP -= enemy_damage
+        print(f"UNABLE TO ATTACK! You took {enemy_damage} damage! ⚔️ HP remaining: {PLAYER_HP} ❤️")
         print("-" * 50)
-        if MYPV <= 0:
-            print("YOU LOSE❌")
+        if PLAYER_HP <= 0:
+            print("YOU LOSE ❌")
             break
-        skip = False
+        skip_turn = False
         continue
 
-    # Demande d'action à l'utilisateur
+    # Ask the player for their action
     try:
-        choice = int(input("Souhaitez-vous attaquer 🗡️ (1) ou utiliser une potion 🧪 (2) ? "))
+        choice = int(input("Attack 🗡️ (1) or use a potion 🧪 (2)? "))
     except ValueError:
-        print("Entrée invalide. Veuillez saisir 1 ou 2.")
+        print("Invalid input. Please enter 1 or 2.")
         continue
 
-    # Option 1 - Attaque
+    # Option 1 — Attack
     if choice == 1:
-        player_attack = randint(5, 10)
-        ENNEMYPV -= player_attack
-        print(f"Vous avez infligé {player_attack} point(s) de dégât à l'ennemi ! ⚔️")
-        if ENNEMYPV <= 0:
-            print("🎊YOU WIN🎊")
+        player_damage = randint(5, 10)
+        ENEMY_HP -= player_damage
+        print(f"You dealt {player_damage} damage to the enemy! ⚔️")
+        if ENEMY_HP <= 0:
+            print("🎊 YOU WIN 🎊")
             break
 
-    # Option 2 - Utiliser une potion
+    # Option 2 — Use a potion
     elif choice == 2:
-        if POTION > 0:
-            skip = True
+        if POTIONS > 0:
+            skip_turn = True
             heal = randint(15, 50)
-            MYPV += heal
-            POTION -= 1
-            if MYPV > 50:
-                MYPV = 50
-            print(f"Vous récupérez {heal} point(s) de vie ❤️ (Il vous reste {POTION} potion(s) 🧪)")
+            PLAYER_HP += heal
+            POTIONS -= 1
+            if PLAYER_HP > 50:
+                PLAYER_HP = 50
+            print(f"You healed {heal} HP ❤️ (Potions remaining: {POTIONS} 🧪)")
         else:
-            print("Aucune potion disponible 🛑")
+            print("No potions left! 🛑")
             continue
     else:
-        print("Choix non valide, veuillez réessayer.")
+        print("Invalid choice. Please try again.")
         continue
 
-    # L'ennemi attaque si il est encore en vie
-    if ENNEMYPV > 0:
-        enemy_attack = randint(5, 15)
-        MYPV -= enemy_attack
-        print(f"Vous avez subi {enemy_attack} point(s) de dégât ! ⚔️\nIl vous reste {MYPV} point(s) de vie ❤️\nIl reste {ENNEMYPV} point(s) de vie à l'ennemi.")
-        if MYPV <= 0:
-            print("YOU LOSE❌")
+    # Enemy attacks if still alive
+    if ENEMY_HP > 0:
+        enemy_damage = randint(5, 15)
+        PLAYER_HP -= enemy_damage
+        print(f"You took {enemy_damage} damage! ⚔️\nYour HP: {PLAYER_HP} ❤️ | Enemy HP: {ENEMY_HP}")
+        if PLAYER_HP <= 0:
+            print("YOU LOSE ❌")
             break
         print("-" * 50)
