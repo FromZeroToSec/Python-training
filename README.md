@@ -1,6 +1,6 @@
 # Python Training
 
-Private repo — Python training exercises.
+Python training exercises.
 
 ## Exercises
 
@@ -12,3 +12,4 @@ Private repo — Python training exercises.
 | 04 | guess-number-advanced | Number guessing game with input validation |
 | 05 | jeuxderole | Text RPG game with combat and potion system |
 | 06 | is-even | Even/odd number checker with replay option |
+| 07 | file-sorter | Automatic file organizer by extension into categorized folders |
