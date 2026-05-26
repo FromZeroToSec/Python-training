@@ -51,27 +51,27 @@ def main():
         elif choice == "1":
             convert =float(input("Enter your celsius number: "))
             result = celsius_to_fahrenheit(convert)
-            print(result)
+            print(f"Result: {result:.2f}")
         elif choice == "2":
             convert =float(input("Enter your fahrenheit number:"))
             result = fahrenheit_to_celsius(convert)
-            print(result)
+            print(f"Result: {result:.2f}")
         elif choice == "3":
             convert =float(input("Enter your celsius number: "))
             result = celsius_to_kelvin(convert)
-            print(result)
+            print(f"Result: {result:.2f}")
         elif choice == "4":
             convert =float(input("Enter your kelvin number: "))
             result = kelvin_to_celsius(convert)
-            print(result)
+            print(f"Result: {result:.2f}")
         elif choice == "5":
             convert =float(input("Enter your fahrenheit number: "))
             result = fahrenheit_to_kelvin(convert)
-            print(result)
+            print(f"Result: {result:.2f}")
         elif choice == "6":
             convert =float(input("Enter your kelvin number: "))
             result = kelvin_to_fahrenheit(convert)
-            print(result)
+            print(f"Result: {result:.2f}")
         else:
             print("Invalid choice. Please try again.")
 
