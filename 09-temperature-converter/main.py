@@ -28,4 +28,52 @@ def kelvin_to_fahrenheit(kelvin):
     fahrenheit = (kelvin - 273.15) * 1.8 + 32
     return fahrenheit
 
-# main menu
+
+def main_menu():
+    """Display the main menu."""
+    print("Temperature Converter")
+    print("1. Celsius to Fahrenheit")
+    print("2. Fahrenheit to Celsius")
+    print("3. Celsius to Kelvin")
+    print("4. Kelvin to Celsius")
+    print("5. Fahrenheit to Kelvin")
+    print("6. Kelvin to Fahrenheit")
+    print("0. Exit")
+    choice = input("Enter your choice: ")
+    return choice
+
+def main():
+    """Display the main menu and handle user input."""
+    while True:
+        choice = main_menu()
+        if choice == "0":
+            break
+        elif choice == "1":
+            convert =float(input("Enter your celsius number: "))
+            result = celsius_to_fahrenheit(convert)
+            print(result)
+        elif choice == "2":
+            convert =float(input("Enter your fahrenheit number:"))
+            result = fahrenheit_to_celsius(convert)
+            print(result)
+        elif choice == "3":
+            convert =float(input("Enter your celsius number: "))
+            result = celsius_to_kelvin(convert)
+            print(result)
+        elif choice == "4":
+            convert =float(input("Enter your kelvin number: "))
+            result = kelvin_to_celsius(convert)
+            print(result)
+        elif choice == "5":
+            convert =float(input("Enter your fahrenheit number: "))
+            result = fahrenheit_to_kelvin(convert)
+            print(result)
+        elif choice == "6":
+            convert =float(input("Enter your kelvin number: "))
+            result = kelvin_to_fahrenheit(convert)
+            print(result)
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
