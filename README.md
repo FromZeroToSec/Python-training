@@ -13,3 +13,5 @@ Python training exercises.
 | 05 | jeuxderole | Text RPG game with combat and potion system |
 | 06 | is-even | Even/odd number checker with replay option |
 | 07 | file-sorter | Automatic file organizer by extension into categorized folders |
+| 08 | number-stats | Statistics calculator: min, max, average and sum from user input |
+| 09 | temperature-converter | CLI temperature converter between Celsius, Fahrenheit and Kelvin |
