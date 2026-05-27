@@ -42,6 +42,7 @@ def main_menu():
     choice = input("Enter your choice: ")
     return choice
 
+
 def main():
     """Display the main menu and handle user input."""
     while True:
@@ -72,11 +73,11 @@ def main():
             elif choice == "6":
                 temperature = float(input("Enter your kelvin number: "))
                 result = kelvin_to_fahrenheit(temperature)
-                print(f"Result: {result:.2f}")  
+                print(f"Result: {result:.2f}")
             else:
                 print("Invalid choice. Please try again.")
         except ValueError:
-                print("Invalid input. Please enter a valid number.")        
+            print("Invalid input. Please enter a valid number.")
 
 if __name__ == "__main__":
     main()
