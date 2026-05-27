@@ -45,35 +45,38 @@ def main_menu():
 def main():
     """Display the main menu and handle user input."""
     while True:
-        choice = main_menu()
-        if choice == "0":
-            break
-        elif choice == "1":
-            convert =float(input("Enter your celsius number: "))
-            result = celsius_to_fahrenheit(convert)
-            print(f"Result: {result:.2f}")
-        elif choice == "2":
-            convert =float(input("Enter your fahrenheit number:"))
-            result = fahrenheit_to_celsius(convert)
-            print(f"Result: {result:.2f}")
-        elif choice == "3":
-            convert =float(input("Enter your celsius number: "))
-            result = celsius_to_kelvin(convert)
-            print(f"Result: {result:.2f}")
-        elif choice == "4":
-            convert =float(input("Enter your kelvin number: "))
-            result = kelvin_to_celsius(convert)
-            print(f"Result: {result:.2f}")
-        elif choice == "5":
-            convert =float(input("Enter your fahrenheit number: "))
-            result = fahrenheit_to_kelvin(convert)
-            print(f"Result: {result:.2f}")
-        elif choice == "6":
-            convert =float(input("Enter your kelvin number: "))
-            result = kelvin_to_fahrenheit(convert)
-            print(f"Result: {result:.2f}")
-        else:
-            print("Invalid choice. Please try again.")
+        try:
+            choice = main_menu()
+            if choice == "0":
+                break
+            elif choice == "1":
+                temperature = float(input("Enter your celsius number: "))
+                result = celsius_to_fahrenheit(temperature)
+                print(f"Result: {result:.2f}")
+            elif choice == "2":
+                temperature = float(input("Enter your fahrenheit number: "))
+                result = fahrenheit_to_celsius(temperature)
+                print(f"Result: {result:.2f}")
+            elif choice == "3":
+                temperature = float(input("Enter your celsius number: "))
+                result = celsius_to_kelvin(temperature)
+                print(f"Result: {result:.2f}")
+            elif choice == "4":
+                temperature = float(input("Enter your kelvin number: "))
+                result = kelvin_to_celsius(temperature)
+                print(f"Result: {result:.2f}")
+            elif choice == "5":
+                temperature = float(input("Enter your fahrenheit number: "))
+                result = fahrenheit_to_kelvin(temperature)
+                print(f"Result: {result:.2f}")
+            elif choice == "6":
+                temperature = float(input("Enter your kelvin number: "))
+                result = kelvin_to_fahrenheit(temperature)
+                print(f"Result: {result:.2f}")  
+            else:
+                print("Invalid choice. Please try again.")
+        except ValueError:
+                print("Invalid input. Please enter a valid number.")        
 
 if __name__ == "__main__":
     main()
