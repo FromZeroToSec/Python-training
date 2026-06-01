@@ -15,3 +15,4 @@ Python training exercises.
 | 07 | file-sorter | Automatic file organizer by extension into categorized folders |
 | 08 | number-stats | Statistics calculator: min, max, average and sum from user input |
 | 09 | temperature-converter | CLI temperature converter between Celsius, Fahrenheit and Kelvin |
+| 10 | fizzbuzz-extended | FizzBuzz sequence generator with CLI input and error handling |
