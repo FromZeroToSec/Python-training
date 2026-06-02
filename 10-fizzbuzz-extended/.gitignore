@@ -12,6 +12,7 @@ venv/
 # Editeurs
 .vscode/
 .idea/
+*.txt
 
 # Système
 .DS_Store
