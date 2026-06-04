@@ -1,2 +1,3 @@
 def is_palindrome(word):
-    return word == word[::-1]
+    cleaned = word.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
