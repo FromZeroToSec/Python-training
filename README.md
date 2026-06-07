@@ -16,3 +16,4 @@ Python training exercises.
 | 08 | number-stats | Statistics calculator: min, max, average and sum from user input |
 | 09 | temperature-converter | CLI temperature converter between Celsius, Fahrenheit and Kelvin |
 | 10 | fizzbuzz-extended | FizzBuzz sequence generator with CLI input and error handling |
+| 11 | palindrome-checker | Palindrome detector with input normalization |
