@@ -17,3 +17,4 @@ Python training exercises.
 | 09 | temperature-converter | CLI temperature converter between Celsius, Fahrenheit and Kelvin |
 | 10 | fizzbuzz-extended | FizzBuzz sequence generator with CLI input and error handling |
 | 11 | palindrome-checker | Palindrome detector with input normalization || 12 | anagram-detector | Anagram detector with input normalization and sorted comparison |
+| 13 | word-counter | Word frequency counter with top N display |
