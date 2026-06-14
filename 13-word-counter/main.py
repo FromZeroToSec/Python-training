@@ -18,3 +18,7 @@ def count_words(text):
 def get_top_words(word_count, n):
     sorted_word_count = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
     return sorted_word_count[:n] 
+
+def display_results(top_words):
+    for word, count in top_words:
+        print(f"{word}: {count}")
