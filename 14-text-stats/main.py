@@ -16,3 +16,8 @@ def get_text():
 def count_characters(text):
     """Return the number of characters in the text"""
     return len(text)
+
+def count_words(text):
+    """Return the number of words in the text"""
+    return len(text.split())
+    
