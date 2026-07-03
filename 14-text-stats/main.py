@@ -1,4 +1,3 @@
-#Étape 3 — compter les mots : une fonction qui split le texte et compte les mots.
 #Étape 5 — fréquence des mots : comme dans word-counter, mais réutilisée ici.
 #Étape 6 — ratio mots/phrases : calcul simple, division.
 #Étape 7 — README + nettoyage.
@@ -21,3 +20,6 @@ def count_words(text):
     """Return the number of words in the text"""
     return len(text.split())
     
+def count_sentences(text):
+    """Return the number of sentences in the text"""
+    return text.count(".") + text.count("?") + text.count("!")
