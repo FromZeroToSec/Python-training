@@ -23,3 +23,14 @@ def count_words(text):
 def count_sentences(text):
     """Return the number of sentences in the text"""
     return text.count(".") + text.count("?") + text.count("!")
+
+def get_word_frequency(text):
+    """Return a dictionary where keys are words and values are their frequency"""
+    words = text.split()
+    word_frequency = {}
+    for word in words:
+        if word in word_frequency:
+            word_frequency[word] += 1
+        else:
+            word_frequency[word] = 1
+    return word_frequency
