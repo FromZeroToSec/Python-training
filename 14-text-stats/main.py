@@ -34,3 +34,10 @@ def get_word_frequency(text):
         else:
             word_frequency[word] = 1
     return word_frequency
+
+def get_word_per_sentence(word_count, sentence_count):
+    """Return the average number of words per sentence"""
+    if sentence_count == 0:
+        return 0
+    else:
+        return word_count / sentence_count
