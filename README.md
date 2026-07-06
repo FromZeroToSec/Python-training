@@ -18,3 +18,4 @@ Python training exercises.
 | 10 | fizzbuzz-extended | FizzBuzz sequence generator with CLI input and error handling |
 | 11 | palindrome-checker | Palindrome detector with input normalization || 12 | anagram-detector | Anagram detector with input normalization and sorted comparison |
 | 13 | word-counter | Word frequency counter with top N display |
+| 14 | text-stats | Text analyzer: characters, words, sentences, word frequency |
