@@ -41,3 +41,19 @@ def get_word_per_sentence(word_count, sentence_count):
         return 0
     else:
         return word_count / sentence_count
+    
+def main():
+    text = get_text()
+    character_count = count_characters(text)
+    word_count = count_words(text)    
+    sentence_count = count_sentences(text)
+    word_frequency = get_word_frequency(text)
+    word_per_sentence = get_word_per_sentence(word_count, sentence_count)
+    print(f"Character count: {character_count}")
+    print(f"Word count: {word_count}")
+    print(f"Sentence count: {sentence_count}")
+    print(f"Word frequency: {word_frequency}")
+    print(f"Word per sentence: {word_per_sentence}")
+
+if __name__ == "__main__":
+    main()    
