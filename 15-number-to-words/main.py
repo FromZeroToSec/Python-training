@@ -34,5 +34,14 @@ tens = {
 }
 
 
+def number_to_word(number):
+    if number < 20:
+        return ones[number]
+    elif number % 10 == 0:
+        return tens[number // 10]
+    else:
+        return f"{tens[number // 10]}-{ones[number % 10]}"
+
+
 if __name__ == "__main__":
     pass
