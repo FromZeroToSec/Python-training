@@ -43,5 +43,17 @@ def number_to_word(number):
         return f"{tens[number // 10]}-{ones[number % 10]}"
 
 
+def main():
+    try:
+        number = int(input("Enter a number between 0 and 99: "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return 
+    if number > 99 or number < 0:
+        print("Please enter a number between 0 and 99.")
+    else:
+        print(number_to_word(number))
+
+
 if __name__ == "__main__":
-    pass
+    main()
