@@ -35,7 +35,12 @@ tens = {
 
 
 def number_to_word(number):
-    if number < 20:
+    if number >= 100:
+        if number % 100 != 0:
+            return f"{ones[number // 100]} hundred {number_to_word(number % 100)}"
+        else:
+            return f"{ones[number // 100]} hundred"
+    elif number < 20:
         return ones[number]
     elif number % 10 == 0:
         return tens[number // 10]
@@ -45,12 +50,12 @@ def number_to_word(number):
 
 def main():
     try:
-        number = int(input("Enter a number between 0 and 99: "))
+        number = int(input("Enter a number between 0 and 999: "))
     except ValueError:
         print("Invalid input. Please enter a number.")
-        return 
-    if number > 99 or number < 0:
-        print("Please enter a number between 0 and 99.")
+        return
+    if number > 999 or number < 0:
+        print("Please enter a number between 0 and 999.")
     else:
         print(number_to_word(number))
 
