@@ -49,15 +49,24 @@ def number_to_word(number):
 
 
 def main():
-    try:
-        number = int(input("Enter a number between 0 and 999: "))
-    except ValueError:
-        print("Invalid input. Please enter a number.")
-        return
-    if number > 999 or number < 0:
-        print("Please enter a number between 0 and 999.")
-    else:
+    while True:
+        try:
+            number = int(input("Enter a number between 0 and 999: "))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
+        if number < 0 or number > 999:
+            print("Please enter a number between 0 and 999.")
+            continue
         print(number_to_word(number))
+        while True:
+            choice = input("Do you want to continue? (y/n): ").lower()
+            if choice == "y":
+                break    # recommence la boucle principale
+            elif choice == "n":
+                return    # quitte la fonction main()
+            else:
+                print("Invalid input. Please enter 'y' or 'n'.")
 
 
 if __name__ == "__main__":
