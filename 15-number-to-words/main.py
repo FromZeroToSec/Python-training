@@ -35,6 +35,14 @@ tens = {
 
 
 def number_to_word(number):
+    """Convert an integer between 0 and 999 into its English word representation.
+
+    Args:
+        number (int): The number to convert, expected to be between 0 and 999.
+
+    Returns:
+        str: The number written out in English words (e.g. "forty-two").
+    """
     if number >= 100:
         if number % 100 != 0:
             return f"{ones[number // 100]} hundred {number_to_word(number % 100)}"
@@ -49,6 +57,9 @@ def number_to_word(number):
 
 
 def main():
+    """Main function to run the program. Asks the user for a number between 0 and 999,
+    converts it to its English word representation, and then asks the user if they
+    want to continue."""
     while True:
         try:
             number = int(input("Enter a number between 0 and 999: "))
@@ -62,9 +73,9 @@ def main():
         while True:
             choice = input("Do you want to continue? (y/n): ").lower()
             if choice == "y":
-                break    # recommence la boucle principale
+                break    # restart the loop
             elif choice == "n":
-                return    # quitte la fonction main()
+                return    # quit the program
             else:
                 print("Invalid input. Please enter 'y' or 'n'.")
 
